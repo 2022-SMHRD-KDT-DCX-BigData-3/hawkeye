@@ -57,7 +57,7 @@
                     <tbody class="table-group-divider">
                       <tr>
                         <th scope="row">1</th>
-                        <td>Mark</td>
+                        <td><img src="image/info.png"></td>
                         <td>Otto</td>
                         <td><button type="button" class="btn btn-primary">신고하기</button></td>
                       </tr>

@@ -9,18 +9,17 @@
 section {
     display: flex;
     justify-content: space-between;
-    background-image: url('/image/end_03.jpg');
 }
 article,
 aside {
-    height: calc(100vh - 160px);
+    height: calc(100vh - 80px);
 }
 h2{
     font-family: 'MICEGothic Bold';
     font-size: 2.1em;
 }
 .img_box img{
-    width: 50%;
+    width: 40%;
     margin-top: 25px;
 }
 .text_box1{
@@ -31,8 +30,8 @@ h2{
     text-shadow: 1px 1px 4px black;
 }
 .text_box2 h4{
-    font-size: 1em;
-    line-height: 25px;
+    font-size: 0.9em;
+    line-height: 23px;
 }
 .text_box2{
     margin-top: 40px;

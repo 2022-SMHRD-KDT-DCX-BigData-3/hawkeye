@@ -39,7 +39,7 @@ header {
 }
 
 header img {
-    margin-left: 270px;
+    margin-left: 100px;
     margin-top: 12px;
     width: 170px;
     height: 50px;
@@ -70,16 +70,16 @@ li {
 
 /* Footer */
 footer {
-    height: 70px;
+    height: 50px;
     border-top: 1px solid gainsboro;
     margin-bottom: 10px;
-    font-size: 0.8em;
+    font-size: 0.7em;
 }
 
 footer h4 {
     color: rgb(187, 187, 187);
     margin-bottom: 4px;
-    margin-top: 20px;
+    margin-top: 14px;
 }
 
 footer h5 {

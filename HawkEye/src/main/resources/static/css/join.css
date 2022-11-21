@@ -3,7 +3,6 @@
 section {
     display: flex;
     justify-content: space-between;
-    background-image: url('image/end_03.jpg');
 }
 
 article,
@@ -16,7 +15,7 @@ aside {
     display: flex;
     justify-content: space-around;
     width: 960px;
-    height: 650px;
+    height: 450px;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
@@ -27,12 +26,12 @@ aside {
 
 .joinbox1 img {
     width: 350px;
-    transform: translateY(140px);
+    transform: translateY(40px);
     margin-left: 40px;
 }
 
 .joinbox2 {
-    transform: translateY(60px);
+    transform: translateY(-20px);
 }
 
 .joinbox2 h2 {
