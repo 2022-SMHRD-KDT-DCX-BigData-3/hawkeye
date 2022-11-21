@@ -1,0 +1,75 @@
+@charset "UTF-8";
+/* 가운데 컨텐츠 부분 */
+@font-face {
+    font-family: 'MICEGothic Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-01@1.0/MICEGothic Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+section {
+    display: flex;
+    justify-content: space-between;
+    background-image: url('/image/end_03.jpg');
+}
+article,
+aside {
+    height: calc(100vh - 160px);
+}
+h2{
+    font-family: 'MICEGothic Bold';
+    font-size: 2.1em;
+}
+.img_box img{
+    width: 50%;
+    margin-top: 25px;
+}
+.text_box1{
+    margin-top: 40px;
+}
+.text_box1 h2{
+    color: white;
+    text-shadow: 1px 1px 4px black;
+}
+.text_box2 h4{
+    font-size: 1em;
+    line-height: 25px;
+}
+.text_box2{
+    margin-top: 40px;
+    font-family: 'MICEGothic Bold';
+}
+
+/*-
+.box4{
+    margin-top: 2px;
+    width: 960px;
+    height: 350px;
+    padding-top: 40px;
+    color: rgb(255, 255, 255);
+    transform: translateX(50%);
+}
+.box5{
+    display: flex;
+    justify-content: space-around; 
+}
+.box5 img{
+    width: 50px;
+}
+.box6{
+    display: flex;
+    justify-content: space-around;
+    height: 200px;
+}
+.in{
+    width: 260px;
+    height: 150px;
+    background-color: rgb(27, 172, 216);
+    border-radius: 50%;
+    margin-top: 10px;
+}
+.box7{
+    display: flex;
+    justify-content: space-around;
+    margin-top: -140px;
+    margin-left: 10px;
+}
