@@ -49,12 +49,16 @@
 				<div class="upbox">
 					<h1>본인의 사진을 올려주세요</h1>
 					<div class="inbox">
-						<label for="inputTag">
-							<h2>
-								<i>Photo Uplode</i>
-							</h2> <i class="fa fa-cloud-upload fa-5x" aria-hidden="true"></i> <input
-							type="file" id="inputTag"> <span id="imageName"></span>
-						</label>
+					 <div class="filebox">
+						    <label for="up">
+						    <h2><i>Photo Uplode</i></h2> 
+							<i class="fa fa-cloud-upload fa-5x" aria-hidden="true"></i> 
+						        <input type="file" onchange="photo_uplode(this);" id="up"> 
+						    </label>   
+						        <div class="image_box">
+						            <img id="preview" />
+						        </div>
+						 </div>	
 					</div>
 				</div>
 			</article>
@@ -75,13 +79,17 @@
 
 	<!-- js -->
 	<script>
-        let input = document.getElementById("inputTag");
-        let imageName = document.getElementById("imageName")
-
-        input.addEventListener("change", () => {
-            let inputImage = document.querySelector("input[type=file]").files[0];
-            imageName.innerText = inputImage.name;
-        })
+    function photo_uplode(input) {
+   	  if (input.files && input.files[0]) {
+   	    var reader = new FileReader();
+   	    reader.onload = function(e) {
+   	      document.getElementById('preview').src = e.target.result;
+   	    };
+   	    reader.readAsDataURL(input.files[0]);
+   	  } else {
+   	    document.getElementById('preview').src = "";
+   	  }
+   	}
     </script>
 </body>
 

@@ -14,9 +14,7 @@ article,
 aside {
   height: calc(100vh - 160px);
 }
-input{
-  display: none;
-}
+
 label{
   cursor:pointer;
   margin-top: 90px;
@@ -57,6 +55,7 @@ h1{
   font-size: 1.6em;
   font-family: 'MICEGothic Bold';
   margin-top: 40px;
+  margin-bottom: 20px;
   color: rgb(255, 255, 255);
   text-shadow: 1px 1px 3px rgb(56, 56, 56);
 }
@@ -66,4 +65,41 @@ h2{
   margin-top: -30px;
   margin-bottom: 30px;
   color: rgb(248, 248, 248);
+}
+ form{
+     text-align: center;
+ }
+ .image_box{
+     position: relative;
+ }
+ #preview{
+     width: 30%;
+     background-color: aqua;
+     margin-top: 20px;
+     position: absolute;
+
+ }
+.filebox label {
+  display: inline-block;
+  padding: .5em .75em;
+  color: rgb(255, 255, 255);
+  font-size: inherit;
+  line-height: normal;
+  vertical-align: middle;
+  cursor: pointer;
+
+}
+.filebox input[type="file"] { 
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip:rect(0,0,0,0);
+  border: 0;
+}
+#preview{
+	width: 50%;
+	
 }
