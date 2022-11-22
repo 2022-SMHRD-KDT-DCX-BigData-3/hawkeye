@@ -47,19 +47,15 @@
 			<aside></aside>
 			<article>
 				<div class="upbox">
+				<div class="inbox">
 					<h1>본인의 사진을 올려주세요</h1>
-					<div class="inbox">
-					 <div class="filebox">
-						    <label for="up">
-						    <h2><i>Photo Uplode</i></h2> 
-							<i class="fa fa-cloud-upload fa-5x" aria-hidden="true"></i> 
-						        <input type="file" onchange="photo_uplode(this);" id="up"> 
-						    </label>   
-						        <div class="image_box">
-						            <img id="preview" />
-						        </div>
-						 </div>	
-					</div>
+						<label for="up">
+						   <input type="file" onchange="photo_uplode(this);" id="up"> 
+						   <div class="image_box">
+						       <img id="preview" />
+						   </div>
+					    </label>
+				</div>
 				</div>
 			</article>
 			<aside></aside>
@@ -79,17 +75,17 @@
 
 	<!-- js -->
 	<script>
-    function photo_uplode(input) {
-   	  if (input.files && input.files[0]) {
-   	    var reader = new FileReader();
-   	    reader.onload = function(e) {
-   	      document.getElementById('preview').src = e.target.result;
-   	    };
-   	    reader.readAsDataURL(input.files[0]);
-   	  } else {
-   	    document.getElementById('preview').src = "";
-   	  }
-   	}
+	    function photo_uplode(input) {
+	   	  if (input.files && input.files[0]) {
+	   	    var reader = new FileReader();
+	   	    reader.onload = function(e) {
+	   	      document.getElementById('preview').src = e.target.result;
+	   	    };
+	   	    reader.readAsDataURL(input.files[0]);
+	   	  } else {
+	   	    document.getElementById('preview').src = "";
+	   	  }
+	   	}
     </script>
 </body>
 

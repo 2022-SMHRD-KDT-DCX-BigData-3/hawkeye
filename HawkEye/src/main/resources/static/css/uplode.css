@@ -39,13 +39,11 @@ label{
 }
 .inbox{
   position: absolute;
-  display: flex;
-  justify-content: space-around;
   width: 450px;
-  height: 250px;
+  height: 350px;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -40%);
+  transform: translate(-50%, -50%);
   background-color: rgb(77, 186, 230);
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.09);
   border-radius: 10px;
@@ -58,6 +56,7 @@ h1{
   margin-bottom: 20px;
   color: rgb(255, 255, 255);
   text-shadow: 1px 1px 3px rgb(56, 56, 56);
+  text-align: center;
 }
 h2{
   font-size: 1.2em;
@@ -66,40 +65,19 @@ h2{
   margin-bottom: 30px;
   color: rgb(248, 248, 248);
 }
- form{
-     text-align: center;
- }
- .image_box{
-     position: relative;
- }
- #preview{
-     width: 30%;
-     background-color: aqua;
-     margin-top: 20px;
-     position: absolute;
 
- }
-.filebox label {
-  display: inline-block;
-  padding: .5em .75em;
-  color: rgb(255, 255, 255);
-  font-size: inherit;
-  line-height: normal;
-  vertical-align: middle;
-  cursor: pointer;
-
+form{
+    text-align: center;
 }
-.filebox input[type="file"] { 
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip:rect(0,0,0,0);
-  border: 0;
+.image_box{
+    position: relative;
 }
 #preview{
-	width: 50%;
-	
+    width: 60%;
+    margin-top: 20px;
+    position: absolute;
+   	transform: translate(-50%, -10%);
+}
+input[type=file]{
+	transform: translate(15%, -20%);
 }
