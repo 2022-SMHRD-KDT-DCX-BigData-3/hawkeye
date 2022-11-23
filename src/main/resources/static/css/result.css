@@ -12,7 +12,7 @@
 }
 
 ol,
-ul {
+ul{
     list-style: none;
 }
 
@@ -95,10 +95,16 @@ h2{
     border-radius: 10px;
     border: 1px solid rgb(182, 182, 182);
     padding: 5px;
+    text-decoration: none !important;
 }
 .btn:hover{
     background-color: rgb(74, 184, 244);
     border: 1 solid rgb(182, 182, 182);
+}
+
+a {
+  text-decoration-line: none;
+  color: white;
 }
 table{
     width: 100%;

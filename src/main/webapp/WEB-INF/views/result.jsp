@@ -16,7 +16,7 @@
 @import
 	url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
 #section{
-	background-image: url("image/back.png");	
+	background-image: url("image/back.png");		
 }
 </style>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -47,6 +47,7 @@
             <div class="box_top">
                 <table class="table table-striped table-hover">
                     <thead>
+                    <tbody class="table-group-divider">
                       <tr>
                         <th scope="col">No.</th>
                         <th scope="col">사진</th>
@@ -54,25 +55,16 @@
                         <th scope="col">신고하기</th>
                       </tr>
                     </thead>
-                    <tbody class="table-group-divider">
-                      <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td><button type="button" class="btn btn-primary">신고하기</button></td>
-                      </tr>
-                      <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td><button type="button" class="btn btn-primary">신고하기</button></td>
-                      </tr>
-                      <tr>
-                        <th scope="row">3</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td><button type="button" class="btn btn-primary">신고하기</button></td>
-                      </tr>
+                    
+                    <c:forEach var="photo" items="${photo}" varStatus="status">
+                    	<tr>
+                    		<th scope="row"><c:out value="${status.count}" /></th>
+                    		<td>${photo.dir}</td>
+                    		<td>${photo.url}</td>
+                    		<td><button type="button" class="btn btn-primary"><a href="${photo.url}" target="_black">신고하기</a></button></td>
+                    	</tr>
+                    </c:forEach>
+                   
                     </tbody>
                   </table>
                 </div>
