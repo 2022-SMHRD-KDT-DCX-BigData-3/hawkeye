@@ -29,7 +29,7 @@ label{
     display: flex;
     justify-content: space-around;
     width: 900px;
-    height: 400px;
+    height: 470px;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
@@ -39,8 +39,8 @@ label{
 }
 .inbox{
   position: absolute;
-  width: 450px;
-  height: 350px;
+  width: 500px;
+  height: 400px;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -73,10 +73,12 @@ form{
     position: relative;
 }
 #preview{
-    width: 60%;
-    margin-top: 20px;
+	
+    height: 250px;
+    margin-top: 40px;
     position: absolute;
    	transform: translate(-50%, -10%);
+   	border-radius: 20px;
 }
 input[type=file]{
 	transform: translate(15%, -20%);
