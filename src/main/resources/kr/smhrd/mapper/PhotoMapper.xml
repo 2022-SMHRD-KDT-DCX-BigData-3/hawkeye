@@ -2,11 +2,13 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="kr.smhrd.mapper.PhotoMapper">
 
-<select id="getPhoto" resultType="kr.smhrd.entity.Photo">
-	select * from UPLOAD_PHOTO
+<select id="getPhoto" resultType="kr.smhrd.entity.Photo" parameterType="kr.smhrd.entity.Criteria">
+	select * from CRAWLING
+limit #{pageStart} , #{perPageNum}
 </select>
 
 <select id="crawling" resultType="kr.smhrd.entity.Crawling">
 	select * from CRAWLING
+</select>
 
 </mapper>

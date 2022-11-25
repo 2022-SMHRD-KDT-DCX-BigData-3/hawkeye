@@ -56,7 +56,7 @@
 						   </div>
 					  	</label>
 					    
-					    <a href="${cpath}/result"><input type="submit" value="검색하기" class="final_button"></a>
+					    <a href="${cpath}/crawling"><input type="submit" value="검색하기" class="final_button"></a>
 				</div>
 				</div>
 			</article>
