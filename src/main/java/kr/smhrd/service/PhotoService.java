@@ -4,6 +4,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Service;
+<<<<<<< HEAD
 
 import kr.smhrd.entity.Crawling;
 import kr.smhrd.entity.Photo;
@@ -26,6 +27,20 @@ public class PhotoService {
 		List<Crawling> crawling = photoMapper.crawling();
 		return crawling;
 		
+=======
+import kr.smhrd.entity.Photo;
+import kr.smhrd.mapper.PhotoMapper;
+
+@Service
+public class PhotoService {
+	
+	@Autowired
+	private PhotoMapper photoMapper;
+	
+	public List<Photo> getPhoto(){
+		List<Photo> photo = photoMapper.getPhoto();
+		return photo;
+>>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-DCX-BigData-3/hawkeye.git
 	}
 	
 

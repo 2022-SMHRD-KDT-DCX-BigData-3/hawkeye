@@ -4,6 +4,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+<<<<<<< HEAD
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import kr.smhrd.entity.Crawling;
@@ -33,6 +34,22 @@ public class PhotoController {
 		List<Crawling> crawling = photoService.crawling();
 		model.addAttribute("crawling", crawling);
 		return "crawling";
+=======
+import kr.smhrd.entity.Photo;
+import kr.smhrd.service.PhotoService;
+
+@Controller
+public class PhotoController {
+	
+	@Autowired
+	private PhotoService photoService;
+	
+	public String photo(Model model) {
+		
+		List<Photo> photo = photoService.getPhoto();
+		model.addAttribute("photo", photo);
+		return "/result";
+>>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-DCX-BigData-3/hawkeye.git
 	}
 	
 
