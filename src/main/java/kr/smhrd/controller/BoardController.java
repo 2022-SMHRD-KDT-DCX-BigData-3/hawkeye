@@ -46,8 +46,4 @@ public class BoardController {
 	}
 	
 	
-	@GetMapping("/result")
-	public String result() {
-		return "result";
-	}
 }
