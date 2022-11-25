@@ -60,10 +60,23 @@
                     <c:forEach var="photo" items="${photo}" varStatus="status">
                     	<tr>
                     		<th scope="row"><c:out value="${status.count}" /></th>
+<<<<<<< HEAD
                     		<td><img src="${photo.up_file}"></td>
                     		<td>${photo.up_date}</td>
                     		<td>${photo.mem_id}</td>
                     		<td><button type="button" class="btn btn-primary"><a href="https://gall.dcinside.com/index.php/singo/?id=singo" target="_black">신고하기</a></button></td>
+=======
+<<<<<<< HEAD
+                    		<td><img src="${photo.up_file}"></td>
+                    		<td>${photo.up_date}</td>
+                    		<td>${photo.mem_id}</td>
+                    		<td><button type="button" class="btn btn-primary"><a href="https://gall.dcinside.com/index.php/singo/?id=singo" target="_black">신고하기</a></button></td>
+=======
+                    		<td>${photo.dir}</td>
+                    		<td>${photo.url}</td>
+                    		<td><button type="button" class="btn btn-primary"><a href="${photo.url}" target="_black">신고하기</a></button></td>
+>>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-DCX-BigData-3/hawkeye.git
+>>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-DCX-BigData-3/hawkeye.git
                     	</tr>
                     </c:forEach>
                    
