@@ -8,7 +8,5 @@
 
 <select id="crawling" resultType="kr.smhrd.entity.Crawling">
 	select * from CRAWLING
-</select>
-
 
 </mapper>
