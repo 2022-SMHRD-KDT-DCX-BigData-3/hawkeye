@@ -64,7 +64,7 @@
 									<td><input type="password" class="form-control" name="mempw"></td>
 								</tr>
 								<tr>
-									<td style="text-align: left">NickName</td>
+									<td style="text-align: left">nickname</td>
 									<td><input type="text" class="form-control"  name="nick"></td>
 								</tr>
 								<tr>

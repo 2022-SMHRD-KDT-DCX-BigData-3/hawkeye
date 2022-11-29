@@ -22,7 +22,7 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<link rel="stylesheet" href="css/result.css">
+<link rel="stylesheet" href="css/crawling.css">
 <script type="text/javascript">
 	$(document).ready(function(){
 		
@@ -95,34 +95,32 @@
                 
            	<!-- 페이징 처리 -->
   		<div style="text-align: center;">
+  		<nav aria-label="Page navigation example">
   		 <ul class="pagination">
   		
   		<!-- 이전 버튼 -->
   		<c:if test="${pageMaker.prev}">
-  			<li class="paginate_button previous"><a href="${pageMaker.startPage-1}">◀</a></li>
+  			<li class="page-item paginate_button previous"><a href="${pageMaker.startPage-1}">◀</a></li>
   		</c:if>
   		
   		<!-- 페이지 번호 출력 -->
   		<c:forEach var="pageNum" begin="${pageMaker.startPage}" end="${pageMaker.endPage}">
-  			<li class="paginate_button ${pageMaker.cri.page==pageNum ? 'active' : ' '}"><a href="${pageNum}">${pageNum}</a></li>
+  			<li class="page-item paginate_button ${pageMaker.cri.page==pageNum ? 'active' : ' '}"><a href="${pageNum}">${pageNum}</a></li>
   		</c:forEach>
   		
   		<!-- 다음 버튼 -->
   		<c:if test="${pageMaker.next}">
-  			<li class="paginate_button previous"><a href="${pageMaker.endPage+1}">▶</a></li>
+  			<li class="page-item paginate_button previous"><a href="${pageMaker.endPage+1}">▶</a></li>
   		</c:if>
 		</ul>
+		</nav>
   		</div>
   		
   		<form id="pageForm" action="${cpath}/crawling" method="get">
   			<input type="hidden" id="page" name="page" value="${pageMaker.cri.page}"/>
   			<input type="hidden" name="perPageNum" value="${pageMaker.cri.perPageNum}"/>
-	    	<%-- <input type="hidden" name="cr_seq" value="${photo.cr_seq}"/> --%>
   		</form>
-  		
-  		
   		<!-- 페이징 처리 -->
-                
                 
           </article>
       </section>

@@ -46,4 +46,9 @@ public class BoardController {
 	}
 	
 	
+	@GetMapping("/progress")
+	public String progress() {
+		return "progress";
+	}
+	
 }
