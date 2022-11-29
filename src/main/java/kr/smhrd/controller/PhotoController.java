@@ -2,11 +2,15 @@ package kr.smhrd.controller;
 
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.repository.config.BootstrapMode;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
-
-import kr.smhrd.entity.Crawling;
+import org.springframework.web.bind.annotation.RequestParam;
+import kr.smhrd.entity.Criteria;
+import kr.smhrd.entity.PageMaker;
 import kr.smhrd.entity.Photo;
 import kr.smhrd.service.PhotoService;
 
@@ -15,25 +19,19 @@ public class PhotoController {
 	
 	@Autowired
 	private PhotoService photoService;
-	
-	// 사용자가 업로드한 사진 데이터
-	@RequestMapping("/result")
-	public String photo(Model model) {
 		
-		List<Photo> photo = photoService.getPhoto();
-		model.addAttribute("photo", photo);
-		return "result";
-	}
-
-	
-	// 크롤링 한 사진 데이터
 	@RequestMapping("/crawling")
-	public String crawling(Model model) {
+	public String photo(Criteria cri, Model model) {
 		
-		List<Crawling> crawling = photoService.crawling();
-		model.addAttribute("crawling", crawling);
+		List<Photo> photo = photoService.getPhoto(cri);
+		model.addAttribute("photo", photo);
+		
+		PageMaker pageMaker = new PageMaker();
+		pageMaker.setCri(cri);
+		pageMaker.setTotalCount(photoService.countBoard());
+		model.addAttribute("pageMaker", pageMaker);
+		System.out.println(photo.size());
 		return "crawling";
 	}
-	
 
 }

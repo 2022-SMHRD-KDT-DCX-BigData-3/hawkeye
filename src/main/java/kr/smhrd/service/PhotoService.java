@@ -4,8 +4,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Service;
-
-import kr.smhrd.entity.Crawling;
+import kr.smhrd.entity.Criteria;
 import kr.smhrd.entity.Photo;
 import kr.smhrd.mapper.PhotoMapper;
 
@@ -15,18 +14,20 @@ public class PhotoService {
 	@Autowired
 	public PhotoMapper photoMapper;
 	
-	// 사용자가 업로드한 사진 데이터
-	public List<Photo> getPhoto(){
-		List<Photo> photo = photoMapper.getPhoto();
+	
+	public List<Photo> getPhoto(Criteria cri){
+		List<Photo> photo = photoMapper.getPhoto(cri);
 		return photo;
 	}
 	
-	// 크롤링 한 사진 데이터
-	public List<Crawling> crawling() {
-		List<Crawling> crawling = photoMapper.crawling();
-		return crawling;
-		
+	public int countBoard() {
+		return photoMapper.countBoard();
 	}
 	
-
+//	public Photo get(int cr_seq) {
+//		Photo photo = photoMapper.read(cr_seq);
+//		photoMapper.countUpdate(cr_seq);
+//		return photo;
+//	}
 }
+
