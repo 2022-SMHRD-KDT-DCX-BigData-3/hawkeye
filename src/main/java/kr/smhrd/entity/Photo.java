@@ -8,9 +8,12 @@ import lombok.Data;
 @Data
 public class Photo {
 	
-	private int up_seq;
-	private String up_file;
-	private Date up_date;
-	private String mem_id;
-
+	private int cr_seq;
+	private String cr_file;
+	private String cr_url;
+	private Date cr_date;
+	private String admin_id;
+	private int cr_count;
+	
 }
+

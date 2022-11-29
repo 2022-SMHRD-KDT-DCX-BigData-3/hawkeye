@@ -49,18 +49,18 @@
 						<img src="image/login_left_image.png">
 					</div>
 					<div class="joinbox2">
-						<form action="" method="post">
+						<form name="question" action="login" method="post">
 							<label>
 								<h2>Login</h2>
 							</label><br>
 							<table>
 								<tr>
 									<td style="text-align: left">Id</td>
-									<td><input type="text" name="id"></td>
+									<td><input type="text" name="login_id"></td>
 								</tr>
 								<tr>
 									<td>password</td>
-									<td><input type="password" name="pw"></td>
+									<td><input type="password" name="login_pw"></td>
 								</tr>
 								<tr>
 									<td colspan="2"><input type="submit" value="로그인"></td>

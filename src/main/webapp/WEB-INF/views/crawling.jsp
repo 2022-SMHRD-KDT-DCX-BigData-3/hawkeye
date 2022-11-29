@@ -21,7 +21,30 @@
 </style>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <link rel="stylesheet" href="css/result.css">
+<script type="text/javascript">
+	$(document).ready(function(){
+		
+		var pageForm=$("#pageForm");
+		$(".paginate_button a").on("click", function(e){
+			e.preventDefault();
+			var page = $(this).attr("href");
+			pageForm.find("#page").val(page);
+			pageForm.submit();
+		});
+		
+		$(".move").on("click", function(e){
+			e.preventDefault();
+			var cr_seq = $(this).attr("href");
+			var tag = "<input type='hidden' name='cr_seq' value='"+cr_seq+"'>";
+			pageForm.append(tag);
+			pageForm.attr("action", "${cpath}/crawling");
+			pageForm.submit();
+		});
+	});
+
+</script>
 </head>
 <body>
     <div class="container-fluid">
@@ -46,23 +69,22 @@
             <h2><i>크롤링 데이터</i></h2>
             <div class="box_top">
                 <table class="table table-striped table-hover">
+                
                     <thead>
                     <tbody class="table-group-divider">
                       <tr>
                         <th scope="col">No.</th>
                         <th scope="col">사진 파일</th>
                         <th scope="col">출처 url</th>
-                        <th scope="col">게시글 날짜</th>
                         <th scope="col">신고하기</th>
                       </tr>
                     </thead>
                     
-                    <c:forEach var="crawling" items="${crawling}" varStatus="status">
+                    <c:forEach var="photo" items="${photo}" varStatus="status">
                     	<tr>
                     		<th scope="row"><c:out value="${status.count}" /></th>
-                    		<td><img src="${crawling.cr_file}"></td>
-                    		<td>${crawling.cr_url}</td>
-                    		<td>${crawling.cr_date}</td>
+                    		<td><img src="${photo.cr_file}"></td>
+                    		<td>${photo.cr_url}</td>
                     		<td><button type="button" class="btn btn-primary"><a href="https://gall.dcinside.com/index.php/singo/?id=singo" target="_black">신고하기</a></button></td>
                     	</tr>
                     </c:forEach>
@@ -70,6 +92,38 @@
                     </tbody>
                   </table>
                 </div>
+                
+           	<!-- 페이징 처리 -->
+  		<div style="text-align: center;">
+  		 <ul class="pagination">
+  		
+  		<!-- 이전 버튼 -->
+  		<c:if test="${pageMaker.prev}">
+  			<li class="paginate_button previous"><a href="${pageMaker.startPage-1}">◀</a></li>
+  		</c:if>
+  		
+  		<!-- 페이지 번호 출력 -->
+  		<c:forEach var="pageNum" begin="${pageMaker.startPage}" end="${pageMaker.endPage}">
+  			<li class="paginate_button ${pageMaker.cri.page==pageNum ? 'active' : ' '}"><a href="${pageNum}">${pageNum}</a></li>
+  		</c:forEach>
+  		
+  		<!-- 다음 버튼 -->
+  		<c:if test="${pageMaker.next}">
+  			<li class="paginate_button previous"><a href="${pageMaker.endPage+1}">▶</a></li>
+  		</c:if>
+		</ul>
+  		</div>
+  		
+  		<form id="pageForm" action="${cpath}/crawling" method="get">
+  			<input type="hidden" id="page" name="page" value="${pageMaker.cri.page}"/>
+  			<input type="hidden" name="perPageNum" value="${pageMaker.cri.perPageNum}"/>
+	    	<%-- <input type="hidden" name="cr_seq" value="${photo.cr_seq}"/> --%>
+  		</form>
+  		
+  		
+  		<!-- 페이징 처리 -->
+                
+                
           </article>
       </section>
 
