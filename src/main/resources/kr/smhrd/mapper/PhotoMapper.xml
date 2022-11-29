@@ -3,12 +3,16 @@
 <mapper namespace="kr.smhrd.mapper.PhotoMapper">
 
 <select id="getPhoto" resultType="kr.smhrd.entity.Photo" parameterType="kr.smhrd.entity.Criteria">
-	select * from CRAWLING
-limit #{pageStart} , #{perPageNum}
+	<![CDATA[
+	select
+	cr_seq, cr_file, cr_url, cr_date, admin_id, cr_count
+	from
+	(
+	select
+	rownum rn, cr_seq, cr_file, cr_url, cr_date, admin_id, cr_count from crawling
+	where rownum <= #{page} * #{perPageNum} and cr_seq > 0
+	)
+	where rn > (#{page} -1) * #{perPageNum}
+		]]>
 </select>
-
-<select id="crawling" resultType="kr.smhrd.entity.Crawling">
-	select * from CRAWLING
-</select>
-
 </mapper>
