@@ -15,7 +15,4 @@
 	where rn > (#{page} -1) * #{perPageNum}
 		]]>
 </select>
-
-
-
 </mapper>

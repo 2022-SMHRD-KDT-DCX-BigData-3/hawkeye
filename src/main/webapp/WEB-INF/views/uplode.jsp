@@ -66,6 +66,27 @@
          <aside></aside>
       </section>
 
+		<!-- center -->
+		<section id="section">
+			<aside></aside>
+			<article>
+				<div class="upbox">
+				<div class="inbox">
+					<h1>본인의 사진을 올려주세요</h1>
+						<label for="up">
+						   <input type="file" onchange="photo_uplode(this);" id="up"> 
+						   <div class="image_box">
+						       <img id="preview" />
+						   </div>
+					  	</label>
+					    
+					    <a href="${cpath}/crawling"><input type="submit" value="검색하기" class="final_button"></a>
+				</div>
+				</div>
+			</article>
+			<aside></aside>
+		</section>
+
       <!-- footer -->
       <footer>
          <div class="info">

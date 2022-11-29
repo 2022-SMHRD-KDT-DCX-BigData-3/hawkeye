@@ -4,6 +4,7 @@ import lombok.Data;
 
 @Data
 public class PageMaker {
+
 	private Criteria cri;
 	private int totalCount;
 	private int startPage;
@@ -30,12 +31,4 @@ public class PageMaker {
 		next = (endPage < tempEndPage) ? true : false;
 	
 	}
-	
-	
-	
-	
-	
-	
-	
-	
 }

@@ -23,11 +23,4 @@ public class PhotoService {
 	public int countBoard() {
 		return photoMapper.countBoard();
 	}
-	
-//	public Photo get(int cr_seq) {
-//		Photo photo = photoMapper.read(cr_seq);
-//		photoMapper.countUpdate(cr_seq);
-//		return photo;
-//	}
 }
-

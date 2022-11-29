@@ -50,22 +50,22 @@
 						<img src="image/join_left_image.png">
 					</div>
 					<div class="joinbox2">
-						<form action="" method="post">
+						<form action="/create"  method="post">
 							<label>
 								<h2>Sign Up</h2>
 							</label><br>
 							<table>
 								<tr>
 									<td style="text-align: left">Id</td>
-									<td><input type="text" name="id"></td>
+									<td><input type="text" class="form-control" name="memid"></td>
 								</tr>
 								<tr>
 									<td>password</td>
-									<td><input type="password" name="pw"></td>
+									<td><input type="password" class="form-control" name="mempw"></td>
 								</tr>
 								<tr>
 									<td style="text-align: left">NickName</td>
-									<td><input type="text" name="nick"></td>
+									<td><input type="text" class="form-control"  name="nick"></td>
 								</tr>
 								<tr>
 									<td colspan="2"><input type="submit" value="회원가입"></td>
