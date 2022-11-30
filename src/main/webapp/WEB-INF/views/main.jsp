@@ -59,12 +59,12 @@
 				</div>
 
 				<div class="box2">
-					<h1>디지털 범죄 불법 촬영물 검출/신고 서비스</h1>
+					<h1>디지털 범죄 불법 촬영물 검출 신고 서비스</h1>
 					<br>
 					<h2>
 						"호크아이 <img src="image/eye.png"> 입니다"
 					</h2>
-					<button type="button" onclick="location.href='${cpath}/uplode'">START</button>
+					<button type="button" onclick="location.href='${cpath}/uplode'" style='cursor:pointer;'>START</button>
 				</div>
 			</article>
 			<aside></aside>
