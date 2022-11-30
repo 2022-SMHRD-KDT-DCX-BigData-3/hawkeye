@@ -34,8 +34,14 @@
 					<li><a href="${cpath}/main"><i>Main</i></a></li>
 					<li><a href="${cpath}/info"><i>About</i></a></li>
 					<li><a href="${cpath}/uplode"><i>Search</i></a></li>
+					<c:if test="${empty member}">
 					<li><a href="${cpath}/login"><i>Login</i></a></li>
 					<li><a href="${cpath}/join"><i>Sign up</i></a></li>
+					</c:if>
+					<c:if test ="${!empty member}">
+					<li><a href="${cpath}/info"><i>Logout</i></a></li>
+					<li><a href=""><i>${member.memid}</i></a></li>
+					</c:if>
 				</ul>
 			</nav>
 		</header>

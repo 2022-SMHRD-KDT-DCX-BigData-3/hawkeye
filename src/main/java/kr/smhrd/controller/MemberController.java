@@ -42,6 +42,7 @@ public class MemberController {
 			return "redirect:/users/loginForm";
 		}
 		
+		System.out.println("Login Success!");
 		session.setAttribute("member", member);
 		return "redirect:/main";
 	}
