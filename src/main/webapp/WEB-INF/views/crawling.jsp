@@ -53,13 +53,19 @@
       <header>
         <a href="${cpath}/main"><img src="image/logo.png"></a>
           <nav>
-              <ul>
-                  <li><a href="${cpath}/main" class="text-decoration-none"><i>Main</i></a></li>
-                  <li><a href="${cpath}/info" class="text-decoration-none"><i>About</i></a></li>
-                  <li><a href="${cpath}/uplode" class="text-decoration-none"><i>Search</i></a></li>
-                  <li><a href="${cpath}/login" class="text-decoration-none"><i>Login</i></a></li>
-                  <li><a href="${cpath}/join" class="text-decoration-none"><i>Sign up</i></a></li>
-              </ul>
+             <ul>
+					<li><a href="${cpath}/main"><i>Main</i></a></li>
+					<li><a href="${cpath}/info"><i>About</i></a></li>
+					<li><a href="${cpath}/uplode"><i>Search</i></a></li>
+					<c:if test="${empty vo}">
+					<li><a href="${cpath}/login"><i>Login</i></a></li>
+					<li><a href="${cpath}/join"><i>Sign up</i></a></li>
+					</c:if>
+					<c:if test ="${!empty vo}">
+					<li><a href="${cpath}/logout"><i>Logout</i></a></li>
+					<li><a href=""><i>${vo.memid}</i></a></li>
+					</c:if>
+				</ul>
           </nav>
       </header>
 

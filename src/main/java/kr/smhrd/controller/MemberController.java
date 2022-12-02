@@ -36,14 +36,21 @@ public class MemberController {
 	public String login(String login_id, String login_pw, HttpSession session) {
 		Member member = memberRepository.findByMemid(login_id);
 		if (member == null) {
-		return "redirect:users/loginForm";
+		return "redirect:login";
 		}
 		if (!login_pw.equals(member.getMempw())) {
-			return "redirect:/users/loginForm";
+			return "redirect:login";
 		}
 		
-		session.setAttribute("member", member);
+		System.out.println("Login Success!");
+		session.setAttribute("vo", member);
 		return "redirect:/main";
+	}
+	
+	@GetMapping("/logout")
+	public String logout(HttpSession session) {
+		session.removeAttribute("vo");
+	return"redirect:/main";
 	}
 
 }
