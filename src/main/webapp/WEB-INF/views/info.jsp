@@ -52,14 +52,14 @@
 				</div>
 				<div class="text_box2">
 					<h4>
-						<i>저희 호크아이는 딥러닝 얼굴 인식 학습을 통한 디지털 성범죄 피해물 검출 서비스로</br> 디지털 성범죄에 노출될
+						저희 호크아이는 딥러닝 얼굴 인식 학습을 통한 디지털 성범죄 피해물 검출 서비스로</br> 디지털 성범죄에 노출될
 							우려가 있는 사용자를 대상으로 제공되는 무료 서비스입니다.</br> 온라인 상에 본인도 모르게 불법으로 유포된 사진이 있는지
 							검색이 가능하며</br> 유출된 사이트의 사진과 주소를 검색 결과로 확인할 수 있으며 해당 사이트의</br> 신고페이지까지 원클릭으로
 							접속할 수 있습니다.
-						</i>
+						
 					</h4>
 				</div>
-				<!--
+				
         <div class="box4">
         <div class="box5">
             <img src="/image/info_icon_01.png">
@@ -69,11 +69,12 @@
         <div class="box6">
             <div class="in"></div>
             <div class="in"></div>
-            <div class="in"></div></div>
+            <div class="in"></div>
+        </div>
         <div class="box7">
             <h4>Python selenium 을 활용한<br>데이터 크롤링</h4><h4>딥러닝 라이브러리를 이용한<br>얼굴 인식 유무 판별</h4><h4>디지털 성범죄 피해 촬영물을<br>검색 및 신고</h4>
         </div> 
-         -->
+         
 	</div>
 	</article>
 	<aside></aside>

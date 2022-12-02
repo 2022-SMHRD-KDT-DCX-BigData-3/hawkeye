@@ -1,9 +1,5 @@
 package kr.smhrd.entity;
 
-
-
-
-
 import java.util.Date;
 
 import javax.persistence.Column;

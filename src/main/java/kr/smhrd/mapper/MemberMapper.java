@@ -12,6 +12,4 @@ public interface MemberMapper {
 	public List<Member> getMember();
 	
 
-
-
 }

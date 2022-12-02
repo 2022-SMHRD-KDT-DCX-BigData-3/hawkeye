@@ -30,7 +30,6 @@ public class PhotoController {
 		pageMaker.setCri(cri);
 		pageMaker.setTotalCount(photoService.countBoard());
 		model.addAttribute("pageMaker", pageMaker);
-		System.out.println(photo.size());
 		return "crawling";
 	}
 
