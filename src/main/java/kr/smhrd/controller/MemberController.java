@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Optional;
 
+
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
@@ -36,7 +37,7 @@ public class MemberController {
 	}
 	
 	@PostMapping("/login")
-	public String login(String login_id, String login_pw, HttpSession session,HttpServletResponse response) throws IOException {
+	public String login(String login_id, String login_pw, HttpSession session, HttpServletResponse response) throws IOException {
 		Member member = memberRepository.findByMemid(login_id); 
 		if (member == null) {
 	           response.setContentType("text/html; charset=UTF-8");
@@ -44,14 +45,14 @@ public class MemberController {
 	            out.println("<script>alert('로그인 정보를 확인해주세요.');history.go(-1);</script>");
 	            out.flush(); 
 	        
-		return "redirect";
+		return "/login";
 		}
 		if (!login_pw.equals(member.getMempw())) {
 	           response.setContentType("text/html; charset=UTF-8");
 	            PrintWriter out = response.getWriter();
 	            out.println("<script>alert('로그인 정보를 확인해주세요.');history.go(-1);</script>");
 	            out.flush(); 
-			return "redirect";
+			return "/login";
 		}
 		
 		System.out.println("Login Success!");
