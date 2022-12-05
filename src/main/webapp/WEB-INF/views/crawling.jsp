@@ -89,8 +89,8 @@
                     <c:forEach var="photo" items="${photo}" varStatus="status">
                     	<tr>
                     		<th scope="row"><c:out value="${status.count}" /></th>
-                    		<td><img src="${photo.cr_file}"></td>
-                    		<td>${photo.cr_url}</td>
+                    		<td><img  src="${photo.cr_file}"></td>
+                    		<td><a href="${photo.cr_url}">${photo.cr_url}</td>
                     		<td><button type="button" class="btn btn-primary"><a href="https://gall.dcinside.com/index.php/singo/?id=singo" target="_black">신고하기</a></button></td>
                     	</tr>
                     </c:forEach>
