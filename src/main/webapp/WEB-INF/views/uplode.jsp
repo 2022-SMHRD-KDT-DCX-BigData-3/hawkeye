@@ -106,7 +106,7 @@ function clickEvent(){
 					<div class="inbox">
 						<h1>본인의 사진을 올려주세요</h1>
 						<label for="up">
-							<form action="http://127.0.0.1:5000/test_img" method="post"
+							<form action="/Uplode" method="post"
 								enctype="multipart/form-data">
 								<input type="file" onchange="photo_uplode(this);" id="up"
 									name="file">
