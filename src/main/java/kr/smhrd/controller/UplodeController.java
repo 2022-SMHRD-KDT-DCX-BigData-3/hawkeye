@@ -1,7 +1,10 @@
 package kr.smhrd.controller;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import kr.smhrd.entity.Uplode;
@@ -14,7 +17,6 @@ public class UplodeController {
 	
 	@RequestMapping("/Uplode")
 	public String Up(Uplode uplode) {
-		System.out.println("asdf");
 		uplodeService.Up(uplode);
 		return "redirect:/progress";
 		
