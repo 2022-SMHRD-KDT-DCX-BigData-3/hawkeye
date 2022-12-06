@@ -13,9 +13,9 @@
 <title>호크아이 업로드 페이지 입니다</title>
 <style>
 @import
-	url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+   url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
 #section {
-	background-image: url("image/back.png");
+   background-image: url("image/back.png");
 }
 </style>
 <script src="https://use.fontawesome.com/3a2eaf6206.js"></script>
@@ -26,78 +26,75 @@
 <body>
 <script>
 function clickEvent(){
-	alert('로그인 후 이용가능합니다.');
-	
+   alert('로그인 후 이용가능합니다.');
+   
 }
 </script>
-	<div class="container">
+   <div class="container">
+ <header>
+         <a href="${cpath}/main"><img src="image/logo.png"></a>
+         <nav>
+               <ul>
+               <li><a href="${cpath}/main"><i>Main</i></a></li>
+               <li><a href="${cpath}/info"><i>About</i></a></li>
+               <c:if test="${empty vo}">
+               <li><a href="${cpath}/login" onclick=clickEvent();><i>Search </i></a></li>
+               <li><a href="${cpath}/login"><i>Login</i></a></li>
+               <li><a href="${cpath}/join"><i>Sign up</i></a></li>
+               </c:if>
+               <c:if test ="${!empty vo}">
+               <li><a href="${cpath}/uplode"><i>Search </i></a></li>
+               <li><a href="${cpath}/logout"><i>Logout</i></a></li>
+               <li><a href=""><i>${vo.memid}</i></a></li>
+               </c:if>
+            </ul>
+         </nav>
+      </header>
+      <!-- center -->
 
-    <!-- header -->
-		<header>
-			<a href="${cpath}/main"><img src="image/logo.png"></a>
-			<nav>
-					<ul>
-					<li><a href="${cpath}/main"><i>Main</i></a></li>
-					<li><a href="${cpath}/info"><i>About</i></a></li>
-					<c:if test="${empty vo}">
-					<li><a href="${cpath}/login" onclick=clickEvent();><i>Search </i></a></li>
-					<li><a href="${cpath}/login"><i>Login</i></a></li>
-					<li><a href="${cpath}/join"><i>Sign up</i></a></li>
-					</c:if>
-					<c:if test ="${!empty vo}">
-					<li><a href="${cpath}/uplode"><i>Search </i></a></li>
-					<li><a href="${cpath}/logout"><i>Logout</i></a></li>
-					<li><a href=""><i>${vo.memid}</i></a></li>
-					</c:if>
-				</ul>
-			</nav>
-		</header>
-
-		<!-- center -->
-		<section id="section">
-			<aside></aside>
-			<article>
-				<div class="upbox">
-					<div class="inbox">
-						<h1>본인의 사진을 올려주세요</h1>
-						<label for="up">
-							<form action="uplode" method="post"
-								enctype="multipart/form-data">
-								<input type="file" onchange="photo_uplode(this);" id="up"
-									name="upfile">
-									<!-- name="file"을 name="upfile"로 바꿈 -->
-								<div class="image_box">
-									<img src="image/uplode.png" id="def_image">
-									<img id="preview" />
-								</div>
-						</label> <input type="submit" style='cursor:pointer' value="검색하기" class="final_button" id="button">
-						</form>
-					</div>
-				</div>
-			</article>
-			<aside></aside>
-		</section>
+      <section id="section">
+         <aside></aside>
+         <article>
+            <div class="upbox">
+               <div class="inbox">
+                  <h1>본인의 사진을 올려주세요</h1>
+                  <label for="up">
+                     <form action="/Uplode" method="post"
+                        enctype="multipart/form-data">
+                        <input type="file" onchange="photo_uplode(this);" id="up"
+                           name="file">
+                        <div class="image_box">
+                           <img src="image/uplode.png" id="def_image">
+                           <img id="preview" />
+                        </div>
+                  </label> <input type="submit" style='cursor:pointer' value="검색하기" class="final_button" id="button">
+                  </form>
+               </div>
+            </div>
+         </article>
+         <aside></aside>
+      </section>
 
 
-		<!-- footer -->
-		<footer>
-			<div class="info">
-				<h4>
-					서비스 이용약관 | 제휴 문의 | 고객센터</a>
-				</h4>
-				<h5>Copyright © Hawkeye. All rights reserved.</h5>
-			</div>
+      <!-- footer -->
+      <footer>
+         <div class="info">
+            <h4>
+               서비스 이용약관 | 제휴 문의 | 고객센터</a>
+            </h4>
+            <h5>Copyright © Hawkeye. All rights reserved.</h5>
+         </div>
 
-		</footer>
-	</div>
+      </footer>
+   </div>
 
-	<!-- js -->
-	<script>
+   <!-- js -->
+   <script>
        function photo_uplode(input) {
            if (input.files && input.files[0]) {
              var reader = new FileReader();
              reader.onload = function(e) {
-            	document.getElementById('def_image').style.display = "none";
+               document.getElementById('def_image').style.display = "none";
                 document.getElementById('preview').src = e.target.result;
                 document.getElementById('button').style.display = "block";
              };
