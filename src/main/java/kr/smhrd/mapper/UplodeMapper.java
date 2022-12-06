@@ -9,6 +9,6 @@ import kr.smhrd.entity.Uplode;
 @Mapper
 public interface UplodeMapper {
 	
-	@Insert("insert into uplode values('1', '324', sysdate, '5')")
+	@Insert("insert into uplode values('1', '324', sysdate, #{memid})")
 	public void Up(Uplode uplode);
 }

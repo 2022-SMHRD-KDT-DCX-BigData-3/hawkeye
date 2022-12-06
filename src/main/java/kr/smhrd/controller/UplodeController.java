@@ -4,9 +4,9 @@ import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import kr.smhrd.entity.Member;
 import kr.smhrd.entity.Uplode;
 import kr.smhrd.service.UplodeService;
 
@@ -16,7 +16,10 @@ public class UplodeController {
 	UplodeService uplodeService;
 	
 	@RequestMapping("/Uplode")
-	public String Up(Uplode uplode) {
+	public String Up(Uplode uplode, HttpSession session) {
+		Member member = (Member) session.getAttribute("vo");
+		uplode.setMemid(member.getMemid());
+		System.out.println(uplode.getMemid());
 		uplodeService.Up(uplode);
 		return "redirect:/progress";
 		
