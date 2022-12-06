@@ -32,44 +32,7 @@ function clickEvent(){
 </script>
 	<div class="container">
 
-      <!-- header -->
-      <header>
-         <a href="${cpath}/main"><img src="image/logo.png"></a>
-         <nav>
-            <ul>
-               <li><a href="${cpath}/main"><i>Main</i></a></li>
-               <li><a href="${cpath}/info"><i>About</i></a></li>
-               <li><a href="${cpath}/uplode"><i>Search</i></a></li>
-               <li><a href="${cpath}/login"><i>Login</i></a></li>
-               <li><a href="${cpath}/join"><i>Sign up</i></a></li>
-            </ul>
-         </nav>
-      </header>
-
-      <!-- center -->
-      <section id="section">
-         <aside></aside>
-         <article>
-            <div class="upbox">
-            <div class="inbox">
-               <h1>본인의 사진을 올려주세요</h1>
-                  <label for="up">
-                  <form action = "http://127.0.0.1:5000/test_img" method="post" enctype="multipart/form-data">
-                     <input type="file" onchange="photo_uplode(this);" id="up" name="file"> 
-                     <div class="image_box">
-                         <img id="preview" />
-                     </div>
-                    </label>
-                    
-                   
-                   <input type="submit" value="검색하기" class="final_button">
-                   </form>
-            </div>
-            </div>
-         </article>
-         <aside></aside>
-      </section>
-		<!-- header -->
+    <!-- header -->
 		<header>
 			<a href="${cpath}/main"><img src="image/logo.png"></a>
 			<nav>
@@ -90,14 +53,6 @@ function clickEvent(){
 			</nav>
 		</header>
 
-      <!-- footer -->
-      <footer>
-         <div class="info">
-            <h4>
-               서비스 이용약관 | 제휴 문의 | 고객센터</a>
-            </h4>
-            <h5>Copyright © Hawkeye. All rights reserved.</h5>
-         </div>
 		<!-- center -->
 		<section id="section">
 			<aside></aside>
@@ -106,10 +61,11 @@ function clickEvent(){
 					<div class="inbox">
 						<h1>본인의 사진을 올려주세요</h1>
 						<label for="up">
-							<form action="http://127.0.0.1:5000/test_img" method="post"
+							<form action="uplode" method="post"
 								enctype="multipart/form-data">
 								<input type="file" onchange="photo_uplode(this);" id="up"
-									name="file">
+									name="upfile">
+									<!-- name="file"을 name="upfile"로 바꿈 -->
 								<div class="image_box">
 									<img src="image/uplode.png" id="def_image">
 									<img id="preview" />
