@@ -67,6 +67,12 @@ li {
     margin: 25px 30px;
 }
 
+li h5{
+	color: #8A8A8A;
+	font-family: 'OTWelcomeBA';
+	margin-top: 5px;
+}
+
 
 /* Footer */
 footer {

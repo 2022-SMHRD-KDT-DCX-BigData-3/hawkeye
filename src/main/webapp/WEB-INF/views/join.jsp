@@ -47,7 +47,7 @@ function clickEvent(){
 					<c:if test ="${!empty vo}">
 					<li><a href="${cpath}/uplode"><i>Search </i></a></li>
 					<li><a href="${cpath}/logout"><i>Logout</i></a></li>
-					<li><a href=""><i>${vo.memid}</i></a></li>
+					<li><i><h5>${vo.memid}님 환영합니다</h5></i></li>
 					</c:if>
 				</ul>
 			</nav>
