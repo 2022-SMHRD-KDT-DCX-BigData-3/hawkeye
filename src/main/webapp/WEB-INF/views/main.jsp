@@ -72,7 +72,13 @@ function clickEvent(){
 					<h2>
 						"호크아이 <img src="image/eye.png"> 입니다"
 					</h2>
+					<c:if test="${empty vo}">
+					<button type="button" onclick=clickEvent(); location.href='${cpath}/uplode';  style='cursor:pointer;'>START</button>
+					</c:if>
+					
+					<c:if test="${!empty vo}">
 					<button type="button" onclick="location.href='${cpath}/uplode'" style='cursor:pointer;'>START</button>
+					</c:if>
 				</div>
 			</article>
 			<aside></aside>
