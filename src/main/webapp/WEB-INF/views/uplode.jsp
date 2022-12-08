@@ -29,6 +29,7 @@ function clickEvent(){
    alert('로그인 후 이용가능합니다.');
    
 }
+
 </script>
    <div class="container">
  <header>
@@ -59,10 +60,11 @@ function clickEvent(){
                <div class="inbox">
                   <h1>본인의 사진을 올려주세요</h1>
                   <label for="up">
-                     <form action="/Uplode" method="post"
-                        enctype="multipart/form-data">
+                     <form action="http://127.0.0.1:5000/test_img" method="post"
+                        enctype="multipart/form-data" id="uplode">
                         <input type="file" onchange="photo_uplode(this);" id="up"
                            name="file">
+                        <input type="hidden" name="memid" value="${vo.memid}">
                         <div class="image_box">
                            <img src="image/uplode.png" id="def_image">
                            <img id="preview" />

@@ -51,4 +51,9 @@ public class BoardController {
 		return "progress";
 	}
 	
+	@GetMapping("/test")
+	public String test() {
+		return "test";
+	}
+	
 }

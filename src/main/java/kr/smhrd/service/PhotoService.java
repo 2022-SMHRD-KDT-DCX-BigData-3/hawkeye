@@ -20,6 +20,7 @@ public class PhotoService {
 		return photo;
 	}
 	
+	
 	public int countBoard() {
 		return photoMapper.countBoard();
 	}

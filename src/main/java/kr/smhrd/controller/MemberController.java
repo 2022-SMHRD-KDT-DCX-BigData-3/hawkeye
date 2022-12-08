@@ -31,11 +31,6 @@ public class MemberController {
 		return "main";
 	}
 	
-	@GetMapping("/loginForm")
-	public String loginForm() {
-		return "/user/login";
-	}
-	
 	@PostMapping("/login")
 	public String login(String login_id, String login_pw, HttpSession session, HttpServletResponse response) throws IOException {
 		Member member = memberRepository.findByMemid(login_id); 

@@ -12,6 +12,7 @@ public class UplodeService {
 
 @Autowired
 UplodeMapper uplodeMapper;
+
 	public void Up(Uplode uplode) {
 		uplodeMapper.Up(uplode);
 	}
