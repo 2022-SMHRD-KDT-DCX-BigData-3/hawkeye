@@ -24,10 +24,9 @@
 </head>
 <body>
 <script>
-function clickEvent(){
-	alert('로그인 후 이용가능합니다.');
-	
-}
+
+
+
 </script>
 	<div class="container">
 
@@ -39,7 +38,7 @@ function clickEvent(){
 					<li><a href="${cpath}/main"><i>Main</i></a></li>
 					<li><a href="${cpath}/info"><i>About</i></a></li>
 					<c:if test="${empty vo}">
-					<li><a href="${cpath}/login" onclick=clickEvent();><i>Search </i></a></li>
+					<li><a id="search" href="${cpath}/login" onclick=clickEvent(); ><i>Search </i></a></li>
 					<li><a href="${cpath}/login"><i>Login</i></a></li>
 					<li><a href="${cpath}/join"><i>Sign up</i></a></li>
 					</c:if>
@@ -96,5 +95,15 @@ function clickEvent(){
 
 		</footer>
 	</div>
+	<script>
+	
+
+	function clickEvent(){
+		alert('로그인 후 이용가능합니다.');
+		
+	}
+	
+
+	</script>
 </body>
 </html>

@@ -30,6 +30,7 @@ function clickEvent(){
    
 }
 
+
 </script>
    <div class="container">
  <header>
@@ -58,7 +59,7 @@ function clickEvent(){
          <article>
             <div class="upbox">
                <div class="inbox">
-                  <h1>본인의 사진을 올려주세요</h1>
+                  <h1>본인의 정면사진을 올려주세요</h1>
                   <label for="up">
                      <form action="http://127.0.0.1:5000/test_img" method="post"
                         enctype="multipart/form-data" id="uplode">
@@ -105,6 +106,9 @@ function clickEvent(){
              document.getElementById('preview').src = "";
            }
          }
+   
+
+       
     </script>
 </body>
 
