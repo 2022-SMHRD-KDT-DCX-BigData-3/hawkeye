@@ -11,7 +11,7 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>호크아이 크롤링 데이터 페이지 입니다</title>
+<title>호크아이 사진 검색 결과 페이지 입니다</title>
 <style>
 @import
 	url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
@@ -79,7 +79,7 @@ function clickEvent(){
       <!-- center -->
       <section id="section">
           <article>
-            <h2><i>크롤링 데이터</i></h2>
+            <h2><i>사진 검색 결과</i></h2>
             <div class="box_top">
                 <table class="table table-striped table-hover">
                 
@@ -93,12 +93,12 @@ function clickEvent(){
                       </tr>
                     </thead>
                     
-                    <c:forEach var="photo" items="${photo}" varStatus="status">
+                    <c:forEach var="crawling" items="${joinTable}" varStatus="status">
                     	<tr>
                     		<th scope="row"><c:out value="${status.count}" /></th>
-                    		<td><img  src="${photo.cr_file}"></td>
-                    		<!--<td><img  src="${photo.cr_file}"></td>-->
-                    		<td><a href="${photo.cr_url}">${photo.cr_url}</td>
+                    		<td><img src="image/sea.jpg" width="150"></td>
+                    		<!--<td><img  src="${photo.deep_photo2}"></td>-->
+                    		<td><a href="${joinTable.crawling.cr_url}">${joinTable.crawling.cr_url}</td>
                     		<td><button type="button" class="btn btn-primary"><a href="https://gall.dcinside.com/index.php/singo/?id=singo" target="_black">신고하기</a></button></td>
                     	</tr>
                     </c:forEach>
