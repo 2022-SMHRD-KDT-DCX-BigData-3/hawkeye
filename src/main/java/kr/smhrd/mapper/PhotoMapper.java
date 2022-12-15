@@ -11,10 +11,10 @@ import kr.smhrd.entity.Photo;
 @Repository
 @Mapper
 public interface PhotoMapper {
-
+	
 	public List<Photo> getPhoto(Criteria cri);
 	
-	@Select("select count(*) from crawling")
+	@Select("select count(*) from deep")
 	public int countBoard();
 	
 

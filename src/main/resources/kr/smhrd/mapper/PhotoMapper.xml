@@ -3,16 +3,9 @@
 <mapper namespace="kr.smhrd.mapper.PhotoMapper">
 
 <select id="getPhoto" resultType="kr.smhrd.entity.Photo" parameterType="kr.smhrd.entity.Criteria">
-	<![CDATA[
 	select
-	cr_seq, cr_file, cr_url, cr_date, admin_id, cr_count
-	from
-	(
-	select
-	rownum rn, cr_seq, cr_file, cr_url, cr_date, admin_id, cr_count from crawling
-	where rownum <= #{page} * #{perPageNum} and cr_seq > 0
-	)
-	where rn > (#{page} -1) * #{perPageNum}
-		]]>
+	deep_seq, up_seq, deep_date, deep_photo1, deep_photo2, deep_photo3, deep_photo4, deep_photo5, deep_photo6, deep_photo7, deep_photo8, deep_photo9, deep_photo10, deep_url1, deep_url2, deep_url3, deep_url4, deep_url5, deep_url6, deep_url7, deep_url8, deep_url9, deep_url10 
+	from deep where up_seq = (select max(up_seq) from deep)
+	
 </select>
 </mapper>

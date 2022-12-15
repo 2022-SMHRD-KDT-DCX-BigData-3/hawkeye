@@ -63,7 +63,7 @@ function clickEvent(){
 					<li><a href="${cpath}/main"><i>Main</i></a></li>
 					<li><a href="${cpath}/info"><i>About</i></a></li>
 					<c:if test="${empty vo}">
-					<li><a href="${cpath}/login" onclick=clickEvent();><i>Search </i></a></li>
+					<li><a href="${cpath}/login" onclick=clickEvent();><i>Search</i></a></li>
 					<li><a href="${cpath}/login"><i>Login</i></a></li>
 					<li><a href="${cpath}/join"><i>Sign up</i></a></li>
 					</c:if>
@@ -79,7 +79,7 @@ function clickEvent(){
       <!-- center -->
       <section id="section">
           <article>
-            <h2><i>크롤링 데이터</i></h2>
+            <h2><i>사진 검색 결과</i></h2>
             <div class="box_top">
                 <table class="table table-striped table-hover">
                 
@@ -94,11 +94,65 @@ function clickEvent(){
                     </thead>
                     
                     <c:forEach var="photo" items="${photo}" varStatus="status">
+
                     	<tr>
-                    		<th scope="row"><c:out value="${status.count}" /></th>
-                    		<td><img  src="${photo.cr_file}"></td>
-                    		<!--<td><img  src="${photo.cr_file}"></td>-->
-                    		<td><a href="${photo.cr_url}">${photo.cr_url}</td>
+                    		<th scope="row">1</th>
+                    		<td>${photo.deep_photo1}</td>
+                    		<td><a href="${photo.deep_url1}">${photo.deep_url1}</a></td>
+                    		<td><button type="button" class="btn btn-primary"><a href="https://gall.dcinside.com/index.php/singo/?id=singo" target="_black">신고하기</a></button></td>
+                    	</tr>
+                    	<tr>
+                    		<th scope="row">2</th>
+                    		<td>${photo.deep_photo2}</td>
+                    		<td><a href="${photo.deep_url2}">${photo.deep_url2}</a></td>
+                    		<td><button type="button" class="btn btn-primary"><a href="https://gall.dcinside.com/index.php/singo/?id=singo" target="_black">신고하기</a></button></td>
+                    	</tr>
+                    	<tr>
+                    		<th scope="row">3</th>
+                    		<td>${photo.deep_photo3}</td>
+                    		<td><a href="${photo.deep_url3}">${photo.deep_url3}</a></td>
+                    		<td><button type="button" class="btn btn-primary"><a href="https://gall.dcinside.com/index.php/singo/?id=singo" target="_black">신고하기</a></button></td>
+                    	</tr>
+                    	<tr>
+                    		<th scope="row">4</th>
+                    		<td>${photo.deep_photo4}</td>
+                    		<td><a href="${photo.deep_url4}">${photo.deep_url4}</a></td>
+                    		<td><button type="button" class="btn btn-primary"><a href="https://gall.dcinside.com/index.php/singo/?id=singo" target="_black">신고하기</a></button></td>
+                    	</tr>
+                    	<tr>
+                    		<th scope="row">5</th>
+                    		<td>${photo.deep_photo5}</td>
+                    		<td><a href="${photo.deep_url5}">${photo.deep_url5}</a></td>
+                    		<td><button type="button" class="btn btn-primary"><a href="https://gall.dcinside.com/index.php/singo/?id=singo" target="_black">신고하기</a></button></td>
+                    	</tr>
+                    	<tr>
+                    		<th scope="row">6</th>
+                    		<td>${photo.deep_photo6}</td>
+                    		<td><a href="${photo.deep_url6}">${photo.deep_url6}</a></td>
+                    		<td><button type="button" class="btn btn-primary"><a href="https://gall.dcinside.com/index.php/singo/?id=singo" target="_black">신고하기</a></button></td>
+                    	</tr>
+                    	<tr>
+                    		<th scope="row">7</th>
+                    		<td>${photo.deep_photo7}</td>
+                    		<td><a href="${photo.deep_url7}">${photo.deep_url7}</a></td>
+                    		<td><button type="button" class="btn btn-primary"><a href="https://gall.dcinside.com/index.php/singo/?id=singo" target="_black">신고하기</a></button></td>
+                    	</tr>
+                    	<tr>
+                    		<th scope="row">8</th>
+                    		<td>${photo.deep_photo8}</td>
+                    		<td><a href="${photo.deep_url8}">${photo.deep_url8}</a></td>
+                    		<td><button type="button" class="btn btn-primary"><a href="https://gall.dcinside.com/index.php/singo/?id=singo" target="_black">신고하기</a></button></td>
+                    	</tr>
+                    	<tr>
+                    		<th scope="row">9</th>
+                    		<td>${photo.deep_photo9}</td>
+                    		<td><a href="${photo.deep_url9}">${photo.deep_url9}</a></td>
+                    		<td><button type="button" class="btn btn-primary"><a href="https://gall.dcinside.com/index.php/singo/?id=singo" target="_black">신고하기</a></button></td>
+                    	</tr>
+                    	<tr>
+                    		<th scope="row">10</th>
+                    		<td>${photo.deep_photo10}</td>
+                    		<td><a href="${photo.deep_url10}">${photo.deep_url10}</a></td>
                     		<td><button type="button" class="btn btn-primary"><a href="https://gall.dcinside.com/index.php/singo/?id=singo" target="_black">신고하기</a></button></td>
                     	</tr>
                     </c:forEach>

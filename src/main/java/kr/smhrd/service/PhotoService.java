@@ -14,12 +14,10 @@ public class PhotoService {
 	@Autowired
 	public PhotoMapper photoMapper;
 	
-	
 	public List<Photo> getPhoto(Criteria cri){
 		List<Photo> photo = photoMapper.getPhoto(cri);
 		return photo;
 	}
-	
 	
 	public int countBoard() {
 		return photoMapper.countBoard();
