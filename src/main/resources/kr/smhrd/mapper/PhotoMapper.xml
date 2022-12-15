@@ -18,6 +18,7 @@
 </select>
 
 
+
 <resultMap type="kr.smhrd.entity.Photo" id="getPhoto">
 	<id property="deep_seq" column="deep_seq" />
 	<id property="up_seq" column="up_seq" />

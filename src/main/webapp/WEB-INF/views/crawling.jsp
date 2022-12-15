@@ -53,6 +53,7 @@ function clickEvent(){
 </script>
 </head>
 <body>
+<%String seq = request.getParameter("uploadseq"); %>
     <div class="container-fluid">
 
       <!-- header -->
@@ -96,7 +97,7 @@ function clickEvent(){
                     <c:forEach var="crawling" items="${joinTable}" varStatus="status">
                     	<tr>
                     		<th scope="row"><c:out value="${status.count}" /></th>
-                    		<td><img src="image/sea.jpg" width="150"></td>
+                    		<td>${joinTable.Photo.deep_photo1}</td>
                     		<!--<td><img  src="${photo.deep_photo2}"></td>-->
                     		<td><a href="${joinTable.crawling.cr_url}">${joinTable.crawling.cr_url}</td>
                     		<td><button type="button" class="btn btn-primary"><a href="https://gall.dcinside.com/index.php/singo/?id=singo" target="_black">신고하기</a></button></td>
