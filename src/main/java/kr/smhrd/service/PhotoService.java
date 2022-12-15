@@ -1,11 +1,9 @@
 package kr.smhrd.service;
 
 import java.util.List;
-import javax.persistence.JoinTable;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Service;
-import kr.smhrd.entity.Crawling;
 import kr.smhrd.entity.Criteria;
 import kr.smhrd.entity.Photo;
 import kr.smhrd.mapper.PhotoMapper;
@@ -16,14 +14,12 @@ public class PhotoService {
 	@Autowired
 	public PhotoMapper photoMapper;
 	
-	public List<JoinTable> joinTable(Criteria cri){
-		List<JoinTable> jointable = photoMapper.joinTable(cri);
-		return jointable;
+	public List<Photo> getPhoto(Criteria cri){
+		List<Photo> photo = photoMapper.getPhoto(cri);
+		return photo;
 	}
 	
 	public int countBoard() {
 		return photoMapper.countBoard();
 	}
-	
-	
 }

@@ -7,12 +7,9 @@ import javax.persistence.Entity;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
-import org.springframework.stereotype.Component;
-
 import lombok.Data;
 
 @Data
-@Component
 public class Photo {
 	
 	private int deep_seq;
@@ -28,6 +25,16 @@ public class Photo {
 	private String deep_photo8;
 	private String deep_photo9;
 	private String deep_photo10;
+	private String deep_url1;
+	private String deep_url2;
+	private String deep_url3;
+	private String deep_url4;
+	private String deep_url5;
+	private String deep_url6;
+	private String deep_url7;
+	private String deep_url8;
+	private String deep_url9;
+	private String deep_url10;
 	
 	
 	@Column(columnDefinition = "date default sysdate")

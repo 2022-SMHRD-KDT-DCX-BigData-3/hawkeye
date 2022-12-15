@@ -1,8 +1,6 @@
 package kr.smhrd.controller;
 
 import java.util.List;
-import javax.persistence.JoinTable;
-import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.repository.config.BootstrapMode;
 import org.springframework.stereotype.Controller;
@@ -10,7 +8,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import kr.smhrd.entity.Criteria;
 import kr.smhrd.entity.PageMaker;
@@ -24,11 +21,10 @@ public class PhotoController {
 	private PhotoService photoService;
 		
 	@RequestMapping("/crawling")
-	public String joinTable(Criteria cri, Model model) {
+	public String photo(Criteria cri, Model model) {
 		
-		List<JoinTable> joinTable = photoService.joinTable(cri);
-		
-		model.addAttribute("joinTable", joinTable);
+		List<Photo> photo = photoService.getPhoto(cri);
+		model.addAttribute("photo", photo);
 		
 		PageMaker pageMaker = new PageMaker();
 		pageMaker.setCri(cri);
@@ -36,6 +32,5 @@ public class PhotoController {
 		model.addAttribute("pageMaker", pageMaker);
 		return "crawling";
 	}
-	
 
 }
