@@ -11,7 +11,7 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>호크아이 크롤링 데이터 페이지 입니다</title>
+<title>호크아이 사진 검색 결과 페이지 입니다</title>
 <style>
 @import
 	url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
@@ -93,9 +93,14 @@ function clickEvent(){
                       </tr>
                     </thead>
                     
+<<<<<<< HEAD
                     <c:forEach var="photo" items="${photo}" varStatus="status">
 
+=======
+                    <c:forEach var="crawling" items="${joinTable}" varStatus="status">
+>>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-DCX-BigData-3/hawkeye.git
                     	<tr>
+<<<<<<< HEAD
                     		<th scope="row">1</th>
                     		<td>${photo.deep_photo1}</td>
                     		<td><a href="${photo.deep_url1}">${photo.deep_url1}</a></td>
@@ -153,6 +158,12 @@ function clickEvent(){
                     		<th scope="row">10</th>
                     		<td>${photo.deep_photo10}</td>
                     		<td><a href="${photo.deep_url10}">${photo.deep_url10}</a></td>
+=======
+                    		<th scope="row"><c:out value="${status.count}" /></th>
+                    		<td><img src="image/sea.jpg" width="150"></td>
+                    		<!--<td><img  src="${photo.deep_photo2}"></td>-->
+                    		<td><a href="${joinTable.crawling.cr_url}">${joinTable.crawling.cr_url}</td>
+>>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-DCX-BigData-3/hawkeye.git
                     		<td><button type="button" class="btn btn-primary"><a href="https://gall.dcinside.com/index.php/singo/?id=singo" target="_black">신고하기</a></button></td>
                     	</tr>
                     </c:forEach>

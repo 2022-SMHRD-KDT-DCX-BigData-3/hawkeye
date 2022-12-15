@@ -2,10 +2,64 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="kr.smhrd.mapper.PhotoMapper">
 
+
 <select id="getPhoto" resultType="kr.smhrd.entity.Photo" parameterType="kr.smhrd.entity.Criteria">
 	select
+<<<<<<< HEAD
 	deep_seq, up_seq, deep_date, deep_photo1, deep_photo2, deep_photo3, deep_photo4, deep_photo5, deep_photo6, deep_photo7, deep_photo8, deep_photo9, deep_photo10, deep_url1, deep_url2, deep_url3, deep_url4, deep_url5, deep_url6, deep_url7, deep_url8, deep_url9, deep_url10 
 	from deep where up_seq = (select max(up_seq) from deep)
 	
+=======
+	deep_seq, up_seq, deep_date, deep_photo1, deep_photo2, deep_photo3, deep_photo4, deep_photo5, deep_photo6, deep_photo7, deep_photo8, deep_photo9, deep_photo10 
+	from
+	(
+	select
+	rownum rn, deep_seq, up_seq, deep_date, deep_photo1, deep_photo2, deep_photo3, deep_photo4, deep_photo5, deep_photo6, deep_photo7, deep_photo8, deep_photo9, deep_photo10 from deep
+	where rownum <= #{page} * #{perPageNum} and up_seq > 0
+	)
+	where rn > (#{page} -1) * #{perPageNum}
+		]]>
+>>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-DCX-BigData-3/hawkeye.git
 </select>
+
+
+<resultMap type="kr.smhrd.entity.Photo" id="getPhoto">
+	<id property="deep_seq" column="deep_seq" />
+	<id property="up_seq" column="up_seq" />
+	<id property="deep_date" column="deep_date" />
+	<id property="deep_photo1" column="deep_photo1" />
+	<id property="deep_photo2" column="deep_photo2" />
+	<id property="deep_photo3" column="deep_photo3" />
+	<id property="deep_photo4" column="deep_photo4" />
+	<id property="deep_photo5" column="deep_photo5" />
+	<id property="deep_photo6" column="deep_photo6" />
+	<id property="deep_photo7" column="deep_photo7" />
+	<id property="deep_photo8" column="deep_photo8" />
+	<id property="deep_photo9" column="deep_photo9" />
+	<id property="deep_photo10" column="deep_photo10" />
+</resultMap>
+
+
+<resultMap type="kr.smhrd.entity.Crawling" id="getCrawling">
+	<id property="cr_seq" column="cr_seq" />
+	<id property="cr_file" column="cr_file" />
+	<id property="cr_url" column="cr_url" />
+	<id property="cr_date" column="cr_date" />
+	<id property="admin_id" column="admin_id" />
+	<id property="cr_count" column="cr_count" />
+</resultMap>
+
+
+<resultMap type="kr.smhrd.entity.Jointable" id="joinTable">
+	<collection property="Photo" resultMap="getPhoto" />
+	<collection property="Crawling" resultMap="getCrawling" />
+</resultMap>
+
+
+<select id="joinTable" resultType="kr.smhrd.entity.Jointable">
+	select * from deep a, crawling b
+	where a.deep_photo1 = b.cr_url
+</select>
+
+
 </mapper>
