@@ -79,13 +79,15 @@ section {
     display: flex;
     justify-content: center;
     background-image: url('image/end_03.jpg');
-    height: 116vh;
+    background-size: cover;
+    height: 210vh;
 }
 
 article,
 aside {
     margin-top: 60px;
     margin-bottom: -70px;
+    height: 100vh;
 }
 h2{
     color: rgb(149, 149, 149);
@@ -124,6 +126,9 @@ table tr{
 }
 .pagination{
 	transform: translate(-1%, -15%);
+}
+.table img{
+	width: 100px;
 }
 
 
