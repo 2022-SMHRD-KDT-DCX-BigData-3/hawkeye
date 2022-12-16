@@ -61,7 +61,7 @@ function clickEvent(){
                <div class="inbox">
                   <h1>본인의 정면사진을 올려주세요</h1>
                   <label for="up">
-                     <form action="/crawling" method="post"
+                     <form action="http://127.0.0.1:5000/test_img" method="post"
                         enctype="multipart/form-data" id="uplode">
                         <input type="file" onchange="photo_uplode(this);" id="up"
                            name="file">
