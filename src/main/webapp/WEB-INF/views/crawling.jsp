@@ -102,7 +102,7 @@ function clickEvent(){
 								<tr>
 									<th scope="row">1</th>
 									<td><img src="${photo.deep_photo1}"></td>
-									<td><a href="${photo.deep_url1}">${photo.deep_url1}</td>
+									<td><a href="${photo.deep_url1}" style="color: black;">${photo.deep_url1}</td>
 									<td><button type="button" class="btn btn-primary">
 											<a href="https://gall.dcinside.com/index.php/singo/?id=singo"
 												target="_black">신고하기</a>
@@ -116,7 +116,7 @@ function clickEvent(){
 								<tr>
 									<th scope="row">2</th>
 									<td><img src="${photo.deep_photo2}"></td>
-									<td><a href="${photo.deep_url2}">${photo.deep_url2}</td>
+									<td><a href="${photo.deep_url2}" style="color: black;">${photo.deep_url2}</td>
 									<td><button type="button" class="btn btn-primary">
 											<a href="https://gall.dcinside.com/index.php/singo/?id=singo"
 												target="_black">신고하기</a>
@@ -130,7 +130,7 @@ function clickEvent(){
 								<tr>
 									<th scope="row">3</th>
 									<td><img src="${photo.deep_photo3}"></td>
-									<td><a href="${photo.deep_url3}">${photo.deep_url3}</td>
+									<td><a href="${photo.deep_url3}" style="color: black;">${photo.deep_url3}</td>
 									<td><button type="button" class="btn btn-primary">
 											<a href="https://gall.dcinside.com/index.php/singo/?id=singo"
 												target="_black">신고하기</a>
@@ -144,7 +144,7 @@ function clickEvent(){
 								<tr>
 									<th scope="row">4</th>
 									<td><img src="${photo.deep_photo4}"></td>
-									<td><a href="${photo.deep_url4}">${photo.deep_url4}</td>
+									<td><a href="${photo.deep_url4}" style="color: black;">${photo.deep_url4}</td>
 									<td><button type="button" class="btn btn-primary">
 											<a href="https://gall.dcinside.com/index.php/singo/?id=singo"
 												target="_black">신고하기</a>
@@ -158,7 +158,7 @@ function clickEvent(){
 								<tr>
 									<th scope="row">5</th>
 									<td><img src="${photo.deep_photo5}"></td>
-									<td><a href="${photo.deep_url5}">${photo.deep_url5}</td>
+									<td><a href="${photo.deep_url5}" style="color: black;">${photo.deep_url5}</td>
 									<td><button type="button" class="btn btn-primary">
 											<a href="https://gall.dcinside.com/index.php/singo/?id=singo"
 												target="_black">신고하기</a>
@@ -172,7 +172,7 @@ function clickEvent(){
 								<tr>
 									<th scope="row">6</th>
 									<td><img src="${photo.deep_photo6}"></td>
-									<td><a href="${photo.deep_url6}">${photo.deep_url6}</td>
+									<td><a href="${photo.deep_url6}" style="color: black;">${photo.deep_url6}</td>
 									<td><button type="button" class="btn btn-primary">
 											<a href="https://gall.dcinside.com/index.php/singo/?id=singo"
 												target="_black">신고하기</a>
@@ -186,7 +186,7 @@ function clickEvent(){
 								<tr>
 									<th scope="row">7</th>
 									<td><img src="${photo.deep_photo7}"></td>
-									<td><a href="${photo.deep_url7}">${photo.deep_url7}</td>
+									<td><a href="${photo.deep_url7}" style="color: black;">${photo.deep_url7}</td>
 									<td><button type="button" class="btn btn-primary">
 											<a href="https://gall.dcinside.com/index.php/singo/?id=singo"
 												target="_black">신고하기</a>
@@ -200,21 +200,21 @@ function clickEvent(){
 								<tr>
 									<th scope="row">8</th>
 									<td><img src="${photo.deep_photo8}"></td>
-									<td><a href="${photo.deep_url8}">${photo.deep_url8}</td>
+									<td><a href="${photo.deep_url8}" style="color: black;">${photo.deep_url8}</a></td>
 									<td><button type="button" class="btn btn-primary">
 											<a href="https://gall.dcinside.com/index.php/singo/?id=singo"
 												target="_black">신고하기</a>
 										</button></td>
 								</tr>
 							</c:if>
-							<c:if test="${empty photo.deep_photo8}">
+							<c:if test="${empty photo.deep_photo9}">
 
 							</c:if>
 							<c:if test="${!empty photo.deep_photo9}">
 								<tr>
 									<th scope="row">9</th>
 									<td><img src="${photo.deep_photo9}"></td>
-									<td><a href="${joinTable.crawling.cr_url}">${joinTable.crawling.cr_url}</a></td>
+									<td><a href="${photo.deep_url9}" style="color: black;">${photo.deep_url9}</a></td>
 									<td><button type="button" class="btn btn-primary">
 											<a href="https://gall.dcinside.com/index.php/singo/?id=singo"
 												target="_black">신고하기</a>
@@ -228,7 +228,7 @@ function clickEvent(){
 								<tr>
 									<th scope="row">10</th>
 									<td><img src="${photo.deep_photo10}"></td>
-									<td><a href="${photo.deep_url10}">${photo.deep_url10}</td>
+									<td><a href="${photo.deep_url10}" style="color: black;">${photo.deep_url10}</td>
 									<td><button type="button" class="btn btn-primary">
 											<a href="https://gall.dcinside.com/index.php/singo/?id=singo"
 												target="_black">신고하기</a>
